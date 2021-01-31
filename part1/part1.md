@@ -1,16 +1,16 @@
-1. Variable i is only scoped to the for loop, so undefined will be printed.
-2. Variable discountedPrice is only scoped to the for loop, so undefined will be printed.
-3. Variable finalPrice will be printed because it is declared in the same method in which it is printed.
-4. The function will return [50, 100, 150]. For each element in the prices array, it is multiplied by one minus the discount (in this case, still 0.5). That price is then rounded to the nearest hundredth and added to the returned array.
+1. Variable i is declared in the scope of the function discountPrices, so it is accessible by the print statement. The value 3 will be printed for the given input.
+2. Variable discountedPrice is declared in the scope of the function discountPrices, so it is accessible by the print statement. The value 150 will be printed for the given input.
+3. Variable finalPrice is declared in the scope of the function discountPrices, so it is accessible by the print statement. The value 150 will be printed for the given input.
+4. The function will return [50, 100, 150]. For each element in the prices array, it is multiplied by one minus the discount (in this case, still 0.5). That price is then rounded to the nearest hundredth and added to the returned array, all of which have the proper scope to be returned by the function.
 
-5. Variable i is only scoped to the for loop, so undefined will be printed.
-6. Variable discountedPrice is only scoped to the for loop, so undefined will be printed.
-7. Variable finalPrice will be printed because it is declared in the same method in which it is printed.
-8. The function will return [50, 100, 150]. It behaves the same way as the previously described function.
+5. Variable i is only scoped to the for loop, so an error will occurr.
+6. Variable discountedPrice is only scoped to the for loop, so an error will occurr.
+7. Variable finalPrice will be printed because it is declared in the same method in which it is printed. The value pr
+8. The function will return [50, 100, 150]. It behaves the same way as the previously described function. The value 150 will be printed for the given input.
 
-9. Variable i is only scoped to the for loop, so undefined will be printed.
-10. Variable discountedPrice is only scoped to the for loop, so undefined will be printed.
-11. Variable finalPrice is a constant, so its originally assigned value will be printed.
+9. Variable i is only scoped to the for loop, so an error will occurr.
+10. Variable discountedPrice is only scoped to the for loop, so an error will occurr.
+11. Variable finalPrice is a constant, so an error will occurr when its value is changed later on in the function.
 
 13. A. student.name
 13. B. student['Grad Year']
@@ -18,21 +18,21 @@
 13. D. student['Favorite Teacher'].name
 13. E. student.courseLoad[0]
 
-14. A. '32'
-14. B. '1'
-14. C. 3
-14. D. '3'
-14. E. true
-14. F. false
-14. G. error
-14. H. error
-15. A. true
-15. B. true
-15. C. true
-15. D. false
-15. E. true
-15. F. true
-16. == compares values, === compares values and types
+14. A. '32'; The 2 is cast to a string and then appended to the '3'
+14. B. 1; The '3' is cast to a number and then the value 2 is subtracted
+14. C. 3; null has the value 0
+14. D. '3null'; null is cast to a string and then appended to the '3'
+14. E. 4; true is cast to the value 1 before 3 is added to it
+14. F. 0; false and null both have the value 0
+14. G. '3undefined'; undefined is cast into a string and then appended to '3'
+14. H. NaN; undefined can not be cast to a number, so the result isn't a number
+15. A. true; '2' is cast to 2 when being compared
+15. B. false; string comparison is used, and '12' is greater length
+15. C. true; '2' is cast to 2 when being compared
+15. D. false; the === operator compares values, which don't match here
+15. E. false; true has the value 1 which does not match 2
+15. F. true; Boolean(2) produces the value true which matches
+16. == compares values, === compares values and types (non-strict equality vs strict equality)
 
 17. 'How are you?' gets printed, since true casts to 1, which isn't equal to 2, but 2 gets cast to true, which means the else if block runs.
 
@@ -42,4 +42,4 @@
 
 20. External File
 
-21. undefined, 4, 3, 2
+21. 1, 4, 3, 2 will be printed this order.
